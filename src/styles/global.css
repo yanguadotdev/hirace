@@ -1,1 +1,39 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-theme-primary: hsl(243, 100%, 68%);
+  --color-theme-secondary: hsl(27, 96%, 69%);
+  --color-theme-tertiary: hsl(170, 65%, 60%);
+  --color-theme-accent: hsl(198, 93%, 68%);
+  --color-theme-dark: hsl(216, 11%, 18%);
+  --color-theme-light-grey: hsl(240, 20%, 90%);
+  --color-theme-light: hsl(240, 20%, 98%);
+
+  --traX-icon: 0;
+}
+
+@layer base {
+  /* Webkit Browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-theme-dark);
+    border-radius: 5px;
+    border: 2px solid oklch(67.65% 0.1539 329.18 / 0.4);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-color: var(--color-theme-dark) transparent;
+    scrollbar-width: thin;
+  }
+}
