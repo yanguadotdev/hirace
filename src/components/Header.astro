@@ -1,15 +1,16 @@
-<header class="border-b border-gray-200" tabindex="0">
+<header class="border-theme-light-grey border-b" tabindex="0">
   <div
     class="relative mx-auto flex h-24 max-w-[1200px] items-center justify-center gap-[5rem] px-4"
   >
     <!-- Logo -->
-    <div class="relative z-20 flex items-center gap-2">
-      <img src="./favicon.svg" alt="Imagen del logo" class="w-8" />
+    <a href="/" class="relative z-20 flex items-center gap-2" aria-label="Link to Home Hirace">
+      <img src="./favicon.svg" alt="Imagen del logo" class="w-8" aria-label="Hirace logo" />
       <span class="text-xl font-medium lg:text-2xl">Hirace</span>
-    </div>
+    </a>
 
     <!-- Navegación principal (modo móvil oculta, visible en desktop) -->
     <nav
+      aria-label="Main navigation"
       class="invisible absolute left-0 top-[calc(100%+2px)] z-10 w-full -translate-y-[150%] bg-white opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] transition-[opacity,transform,visibility] duration-300 ease-in-out lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none"
     >
       <ul
@@ -24,11 +25,11 @@
 
     <!-- Botón de registro -->
     <button
-      type="submit"
-      class="bg-theme-primary ml-auto hidden h-12 w-max items-center justify-center gap-1 rounded-xl px-4 py-2 text-sm font-medium text-white lg:flex"
+      type="button"
+      class="bg-theme-primary ml-auto hidden h-12 items-center justify-center gap-1 rounded-xl px-4 py-2 text-sm text-white lg:flex"
     >
       <span>Sign Up</span>
-      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
           d="M9 5L16 12L9 19"
           stroke="currentColor"
@@ -38,28 +39,30 @@
       </svg>
     </button>
 
-    <!-- Icono menú hamburguesa (solo visible en mobile) -->
-    <button class="relative z-20 ml-auto lg:hidden">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <!-- menú hamburguesa -->
+    <button
+      class="js-btn-menu relative z-20 ml-auto lg:hidden"
+      aria-label="Open navigation menu"
+      aria-controls="main-menu"
+      aria-expanded="false"
+    >
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path
+          class="line line1"
           d="M4 22.6667H28"
           stroke="#635BFF"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"></path>
         <path
+          class="line line2"
           d="M4 16H28"
           stroke="#635BFF"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"></path>
         <path
+          class="line line3"
           d="M4 9.33333H28"
           stroke="#635BFF"
           stroke-width="2"
