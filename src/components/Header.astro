@@ -10,8 +10,9 @@
 
     <!-- Navegación principal (modo móvil oculta, visible en desktop) -->
     <nav
+      id="navMain"
       aria-label="Main navigation"
-      class="invisible absolute left-0 top-[calc(100%+2px)] z-10 w-full -translate-y-[150%] bg-white opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] transition-[opacity,transform,visibility] duration-300 ease-in-out lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none"
+      class="absolute left-0 top-[calc(100%+2px)] z-10 w-full -translate-y-[150%] bg-white opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none origin-top"
     >
       <ul
         class="[&_a]:hover:text-theme-primary flex flex-col items-center gap-4 p-6 font-normal lg:flex-row lg:gap-6 lg:p-0 [&_a]:px-3 [&_a]:py-1 [&_a]:font-medium"
@@ -41,7 +42,8 @@
 
     <!-- menú hamburguesa -->
     <button
-      class="js-btn-menu relative z-20 ml-auto lg:hidden"
+      id="menuBtn"
+      class="relative z-20 ml-auto lg:hidden"
       aria-label="Open navigation menu"
       aria-controls="main-menu"
       aria-expanded="false"
@@ -72,3 +74,29 @@
     </button>
   </div>
 </header>
+
+<style>
+  #navMain {
+    visibility: hidden;
+    transition: opacity 200ms 100ms, translate 300ms, visibility 0s 300ms;
+  }
+
+  #navMain.open {
+    visibility: visible;
+    opacity: 1;
+    translate: 0 0;
+    transition: opacity 200ms, translate 300ms, visibility 0s 0s;
+  }
+</style>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn')
+  const nav = document.getElementById('navMain')
+
+  menuBtn?.addEventListener('click', () => {
+    const isOpen = nav?.classList.contains('open')
+    console.log({ isOpen })
+    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
+    nav?.classList.toggle('open')
+  })
+</script>
