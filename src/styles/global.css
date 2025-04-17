@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-primary: 'Poppins';
+
   --color-theme-primary: hsl(243, 100%, 68%);
   --color-theme-secondary: hsl(27, 96%, 69%);
   --color-theme-tertiary: hsl(170, 65%, 60%);
@@ -36,4 +38,41 @@
     scrollbar-color: var(--color-theme-dark) transparent;
     scrollbar-width: thin;
   }
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-medium.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-bold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-black.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@utility mask-fade-bottom {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }

@@ -1,7 +1,71 @@
----
----
+<header class="border-b border-gray-200" tabindex="0">
+  <div
+    class="relative mx-auto flex h-24 max-w-[1200px] items-center justify-center gap-[5rem] px-4"
+  >
+    <!-- Logo -->
+    <div class="relative z-20 flex items-center gap-2">
+      <img src="./favicon.svg" alt="Imagen del logo" class="w-8" />
+      <span class="text-xl font-medium lg:text-2xl">Hirace</span>
+    </div>
 
+    <!-- Navegación principal (modo móvil oculta, visible en desktop) -->
+    <nav
+      class="invisible absolute left-0 top-[calc(100%+2px)] z-10 w-full -translate-y-[150%] bg-white opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] transition-[opacity,transform,visibility] duration-300 ease-in-out lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none"
+    >
+      <ul
+        class="[&_a]:hover:text-theme-primary flex flex-col items-center gap-4 p-6 font-normal lg:flex-row lg:gap-6 lg:p-0 [&_a]:px-3 [&_a]:py-1 [&_a]:font-medium"
+      >
+        <a href="#">Job Vacancy</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">About Us</a>
+      </ul>
+    </nav>
 
-<header id="header">
-  This is header, hi everybody
+    <!-- Botón de registro -->
+    <button
+      type="submit"
+      class="bg-theme-primary ml-auto hidden h-12 w-max items-center justify-center gap-1 rounded-xl px-4 py-2 text-sm font-medium text-white lg:flex"
+    >
+      <span>Sign Up</span>
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M9 5L16 12L9 19"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <!-- Icono menú hamburguesa (solo visible en mobile) -->
+    <button class="relative z-20 ml-auto lg:hidden">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 22.6667H28"
+          stroke="#635BFF"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M4 16H28"
+          stroke="#635BFF"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M4 9.33333H28"
+          stroke="#635BFF"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
 </header>
