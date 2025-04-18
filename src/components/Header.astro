@@ -77,7 +77,6 @@
 
 <style>
   #navMain {
-    visibility: hidden;
     transition: opacity 200ms 100ms, translate 300ms, visibility 0s 300ms;
   }
 
@@ -94,9 +93,7 @@
   const nav = document.getElementById('navMain')
 
   menuBtn?.addEventListener('click', () => {
-    const isOpen = nav?.classList.contains('open')
-    console.log({ isOpen })
+    const isOpen = nav?.classList.toggle('open')
     menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
-    nav?.classList.toggle('open')
   })
 </script>
