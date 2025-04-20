@@ -5,11 +5,13 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
 ---
 
 <header id="header" class="border-theme-light-grey border-b" tabindex="0">
-  <div
-    class="relative mx-auto flex h-24 max-w-[1200px] items-center justify-center gap-20 px-4"
-  >
+  <div class="relative mx-auto flex h-24 max-w-[1200px] items-center justify-center gap-20 px-4">
     <!-- Logo -->
-    <a href="/" class={`${!shouldDoClick ? 'pointer-events-none' : ''} relative z-20 flex items-center gap-2`} aria-label="Link to Home Hirace">
+    <a
+      href="/"
+      class={`${!shouldDoClick ? 'pointer-events-none' : ''} relative z-20 flex items-center gap-2`}
+      aria-label="Link to Home Hirace"
+    >
       <img src="./favicon.svg" alt="Imagen del logo" class="w-8" aria-label="Hirace logo" />
       <span class="text-xl font-medium lg:text-2xl">Hirace</span>
     </a>
@@ -18,7 +20,7 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
     <nav
       id="navMain"
       aria-label="Main navigation"
-      class="absolute left-0 top-[calc(100%+2px)] z-10 w-full origin-top -translate-y-[150%] bg-white opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none font-semibold"
+      class="absolute left-0 top-[calc(100%+2px)] z-10 w-full origin-top -translate-y-[150%] bg-white font-semibold opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none"
     >
       <ul
         class="[&_a]:hover:text-theme-primary flex flex-col items-center gap-4 p-6 font-normal lg:flex-row lg:gap-6 lg:p-0 [&_a]:px-3 [&_a]:py-1 [&_a]:font-medium"
@@ -33,10 +35,17 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
     <!-- Botón de registro -->
     <button
       type="button"
-      class="bg-theme-primary ml-auto hidden h-12 items-center justify-center gap-1 rounded-xl px-4 py-2 text-sm text-white lg:flex cursor-pointer group"
+      class="bg-theme-primary group ml-auto hidden h-12 cursor-pointer items-center justify-center gap-1 rounded-xl px-4 py-2 text-sm text-white lg:flex"
     >
       <span>Sign Up</span>
-      <svg class="group-hover:translate-x-1 transition-transform duration-300 ease-in" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <svg
+        class="transition-transform duration-300 ease-in group-hover:translate-x-1"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
         <path
           d="M9 5L16 12L9 19"
           stroke="currentColor"
@@ -49,7 +58,7 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
     <!-- menú hamburguesa -->
     <button
       id="menuBtn"
-      class="relative z-20 ml-auto lg:hidden cursor-pointer group"
+      class="group relative z-20 ml-auto cursor-pointer lg:hidden"
       aria-label="Open navigation menu"
       aria-controls="main-menu"
       aria-expanded="false"
