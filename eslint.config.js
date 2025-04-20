@@ -10,7 +10,6 @@ export default defineConfig([
       // override/add rules settings here, such as:
       // "astro/no-set-html-directive": "error"
       'comma-dangle': ['error', 'always-multiline'],
-      'double-quote': ['error', 'always'],
     },
   },
   globalIgnores(['.vercel/']),
