@@ -1,3 +1,195 @@
-<section id="hero">
+<section id="hero" class="pb-40 pt-20">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap items-start gap-12 px-4 [&>*]:flex-[1]">
+    <section class="basis-[350px]">
+      <a
+        href="#"
+        class="border-theme-light-grey text-theme-primary flex items-center justify-center gap-2 rounded-[100vw] border p-[.25em] pr-[.5em] text-sm font-medium sm:w-max"
+      >
+        <span class="bg-theme-primary inline-block rounded-[100vw] px-3 py-1 text-xs text-white">
+          NEW
+        </span>
+        <span class="link-ghost__text"> WE ARE HIRING </span>
+        <svg
+          class="arrow"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 12L16 7M21 12L16 17M21 12H3"
+            stroke="#625AFF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
 
+      <h1 class="my-4 text-balance text-[clamp(1.5rem,6vw,2.5rem)] font-semibold leading-tight">
+        The best place to find your dream job
+      </h1>
+
+      <p class="text-theme-dark/90 text-[clamp(0.875rem,4vw,1rem)] font-light">
+        Find job you love and research the fastest-growing companies, and hire experienced workers.
+      </p>
+      <!-- INPUT SEARCH -->
+      <div class="@container/search">
+        <form
+          method="post"
+          class="border-theme-light-grey @md/search:flex-row @md/search:h-16 @md/search:p-1 @md/search:pl-3 @md/search:max-w-max mt-10 flex flex-col items-center justify-start rounded-2xl border p-3"
+        >
+          <div class="@md/search:h-full flex h-12 w-full items-center justify-start text-base">
+            <svg
+              class="min-w-6"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 20L28 28M13.3333 22.6667C8.17868 22.6667 4 18.488 4 13.3333C4 8.17868 8.17868 4 13.3333 4C18.488 4 22.6667 8.17868 22.6667 13.3333C22.6667 18.488 18.488 22.6667 13.3333 22.6667Z"
+                stroke="#635BFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+
+            <input
+              class="text-theme-dark/80 placeholder:text-theme-light-grey block h-full w-full px-2 placeholder:font-light focus:outline-none"
+              autocomplete="off"
+              placeholder="Job title"
+              type="text"
+              name="job"
+              id="job-input"
+            />
+          </div>
+
+          <div
+            class="bg-theme-light-grey @md/search:w-[1px] @md/search:h-3/4 @md/search:py-0 @md/search:mx-4 my-4 h-[1px] w-full"
+          >
+          </div>
+
+          <div class="@md/search:h-full flex h-12 w-full items-center justify-start text-base">
+            <svg
+              class="min-w-6"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.6665 13.2305C6.6665 19.6996 12.3258 25.0492 14.8308 27.1003C15.1893 27.3938 15.3707 27.5423 15.6381 27.6176C15.8464 27.6763 16.1529 27.6763 16.3612 27.6176C16.6291 27.5422 16.8093 27.3951 17.1691 27.1005C19.6741 25.0494 25.3331 19.7002 25.3331 13.2311C25.3331 10.7829 24.3498 8.43473 22.5994 6.70363C20.8491 4.97252 18.4753 4 15.9999 4C13.5246 4 11.1505 4.97267 9.40017 6.70378C7.64983 8.43488 6.6665 10.7823 6.6665 13.2305Z"
+                stroke="#635BFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M13.3332 12C13.3332 13.4728 14.5271 14.6667 15.9998 14.6667C17.4726 14.6667 18.6665 13.4728 18.6665 12C18.6665 10.5272 17.4726 9.33333 15.9998 9.33333C14.5271 9.33333 13.3332 10.5272 13.3332 12Z"
+                stroke="#635BFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+
+            <input
+              class="text-theme-dark/80 placeholder:text-theme-light-grey block h-full w-full px-2 placeholder:font-light focus:outline-none"
+              autocomplete="off"
+              placeholder="All Location"
+              type="text"
+              name="location"
+              id="location-input"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="bg-theme-primary @md/search:m-0 @md/search:max-w-max @md/search:ml-4 @md/search:h-full group mt-4 flex h-12 cursor-pointer items-center justify-center gap-1 rounded-xl px-4 pl-8 pr-6 text-sm text-white"
+          >
+            <span>Search</span>
+            <svg
+              class="transition-transform duration-300 ease-in group-hover:translate-x-1"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5L16 12L9 19"
+                stroke="Currentcolor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <footer class="text-theme-dark/80 mt-8 flex items-center justify-start gap-8 text-sm">
+        <div class="flex items-center gap-1.5">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="16" cy="16" r="16" fill="#635BFF"></circle>
+            <path
+              d="M10 16L14.2426 20.2426L22.727 11.7573"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <span>7 Days free trial</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="16" cy="16" r="16" fill="#635BFF"></circle>
+            <path
+              d="M10 16L14.2426 20.2426L22.727 11.7573"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <span>Easy to set up</span>
+        </div>
+      </footer>
+    </section>
+
+    <section class="relative basis-[350px] @container/hero-graphic @md/hero-graphic:[&>img:nth-child(n+3)]:w-[150px]">
+      <img src="/src/assets/svg/hero-graphic/hero.svg" alt="" class="[&~img]:absolute" />
+
+      <!-- Images with position: absolute -->
+      <img src="/src/assets/svg/hero-graphic/hero-ab-1.svg" class="w-[40%] bottom-5" alt="" />
+      <img
+        src="/src/assets/svg/hero-graphic/hero-user-1.svg"
+        alt=""
+        class="js-img-abs w-24 top-18 left-14"
+        data-depth="8"
+      />
+      <img
+        src="/src/assets/svg/hero-graphic/hero-user-2.svg"
+        alt=""
+        class="js-img-abs w-24 right-6 top-1/3"
+        data-depth="3"
+      />
+      <img
+        src="/src/assets/svg/hero-graphic/hero-user-3.svg"
+        alt=""
+        class="js-img-abs w-24 right-[30%] bottom-[18%]"
+        data-depth="2"
+      />
+    </section>
+  </div>
 </section>
