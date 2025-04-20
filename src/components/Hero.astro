@@ -1,9 +1,9 @@
 <section id="hero" class="pb-40 pt-20">
-  <div class="mx-auto flex max-w-[1200px] flex-wrap items-start gap-12 px-4 [&>*]:flex-[1]">
-    <section class="basis-[350px]">
+  <div class="mx-auto flex max-w-[1200px] flex-wrap items-start gap-12 px-4">
+    <section class="basis-[350px] flex-[1]">
       <a
         href="#"
-        class="border-theme-light-grey text-theme-primary flex items-center justify-center gap-2 rounded-[100vw] border p-[.25em] pr-[.5em] text-sm font-medium sm:w-max"
+        class="border-theme-light-grey text-theme-primary flex items-center justify-center gap-2 rounded-[100vw] border p-[.25em] pr-[.5em] text-sm font-medium min-[400px]:w-max"
       >
         <span class="bg-theme-primary inline-block rounded-[100vw] px-3 py-1 text-xs text-white">
           NEW
@@ -106,7 +106,7 @@
 
           <button
             type="submit"
-            class="bg-theme-primary @md/search:m-0 @md/search:max-w-max @md/search:ml-4 @md/search:h-full group mt-4 flex h-12 cursor-pointer items-center justify-center gap-1 rounded-xl px-4 pl-8 pr-6 text-sm text-white"
+            class="bg-theme-primary w-full @md/search:m-0 @md/search:max-w-max @md/search:ml-4 @md/search:h-full group mt-4 flex h-12 cursor-pointer items-center justify-center gap-1 rounded-xl px-4 pl-8 pr-6 text-sm text-white"
           >
             <span>Search</span>
             <svg
@@ -168,7 +168,7 @@
     </section>
 
     <section
-      class="@container/hero-graphic @min-[400px]/hero-graphic:[&>img:nth-child(n+3)]:w-[150px] relative basis-[350px]"
+      class="@container/hero-graphic @min-[400px]/hero-graphic:[&>img:nth-child(n+3)]:w-[150px] flex-[1] relative basis-[350px]"
     >
       <img src="/src/assets/svg/hero-graphic/hero.svg" alt="" class="[&~img]:absolute" />
 
@@ -177,7 +177,7 @@
       <img
         src="/src/assets/svg/hero-graphic/hero-user-1.svg"
         alt=""
-        class="js-img-abs top-18 left-14 w-24"
+        class="js-img-abs top-12 left-14 w-24 @min-[400px]/hero-graphic:top-16"
         data-depth="8"
       />
       <img
