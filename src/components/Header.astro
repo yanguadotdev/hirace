@@ -4,7 +4,7 @@ const disableClickOnRoutes = ['/']
 const shouldDoClick = !disableClickOnRoutes.includes(pathname)
 ---
 
-<header id="header" class="border-theme-light-grey border-b" tabindex="0">
+<header id="header" class="border-theme-light-grey border-b relative z-10" tabindex="0">
   <div class="relative mx-auto flex h-24 max-w-[1200px] items-center justify-center gap-20 px-4">
     <!-- Logo -->
     <a
@@ -16,11 +16,15 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
       <span class="text-xl font-medium lg:text-2xl">Hirace</span>
     </a>
 
+    <div
+      class="lg:hidden bg-white absolute inset-0 z-10"
+    />
+
     <!-- Navegación principal (modo móvil oculta, visible en desktop) -->
     <nav
       id="navMain"
       aria-label="Main navigation"
-      class="absolute left-0 top-[calc(100%+2px)] z-10 w-full origin-top -translate-y-[150%] bg-white font-semibold opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none"
+      class="absolute left-0 top-[calc(100%+2px)] w-full -translate-y-[120%] origin-top bg-white font-semibold opacity-0 shadow-[0_16px_16px_rgba(0,0,0,0.05)] lg:visible lg:static lg:w-auto lg:translate-y-0 lg:opacity-100 lg:shadow-none rounded-b-[50%]"
     >
       <ul
         class="[&_a]:hover:text-theme-primary flex flex-col items-center gap-4 p-6 font-normal lg:flex-row lg:gap-6 lg:p-0 [&_a]:px-3 [&_a]:py-1 [&_a]:font-medium"
@@ -90,19 +94,22 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
 <style>
   #navMain {
     transition:
-      opacity 200ms 100ms,
-      translate 300ms,
-      visibility 0s 300ms;
+      opacity 200ms 200ms,
+      translate 500ms cubic-bezier(.87,-.5,.03,1.54),
+      visibility 0s 500ms,
+      border-radius 200ms cubic-bezier(.87,-1.38,.03,1.54);
   }
 
   #navMain.open {
     visibility: visible;
     opacity: 1;
     translate: 0 0;
+    border-radius: 0;
     transition:
       opacity 200ms,
-      translate 300ms,
-      visibility 0s 0s;
+      translate 500ms cubic-bezier(.87,-1.38,.03,1.54),
+      visibility 0s 0s,
+      border-radius 200ms 400ms;
   }
 </style>
 
