@@ -3,10 +3,13 @@
     <h2 class="text-theme-dark/70 mb-10 text-center text-[clamp(1rem,2vw,1.5rem)]">
       Trusted by 150+ world's best companies
     </h2>
-    <section class="relative overflow-hidden whitespace-nowrap py-4" id="companieSlider">
+    <section
+      class="after:from-theme-light before:from-theme-light relative overflow-hidden whitespace-nowrap py-4 before:pointer-events-none before:absolute before:left-0 before:top-0 before:z-[1] before:h-full before:w-20 before:bg-gradient-to-r before:to-transparent after:pointer-events-none after:absolute after:left-auto after:right-0 after:top-0 after:h-full after:w-20 after:bg-gradient-to-l after:to-transparent"
+      id="companieSlider"
+    >
       <div
         id="companieSliderContent"
-        class="[&>*]:grayscale-100 [&>*]:hover:transform-[scale(1.2)_rotate(5deg)] [&>*:nth-child(odd):hover]:transform-[scale(1.2)_rotate(-5deg)] inline-block whitespace-nowrap [&>*]:mx-6 [&>*]:inline-block [&>*]:h-8 [&>*]:w-auto [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-[cubic-bezier(.33,-0.09,.65,1.27)] [&>*]:hover:grayscale-0 [&>*]:max-w-max"
+        class="[&>*]:grayscale-100 [&>*]:hover:transform-[scale(1.2)_rotate(5deg)] [&>*:nth-child(odd):hover]:transform-[scale(1.2)_rotate(-5deg)] inline-block whitespace-nowrap [&>*]:mx-6 [&>*]:inline-block [&>*]:h-8 [&>*]:w-auto [&>*]:max-w-max [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-[cubic-bezier(.33,-0.09,.65,1.27)] [&>*]:hover:grayscale-0"
       >
         <img src="/clients/airbnb.svg" alt="Airbnb Logo" />
         <img src="/clients/asana.svg" alt="Asana Logo" />
@@ -24,7 +27,6 @@
 <script>
   import { $ } from '@/lib/dom-selector'
 
-  
   document.addEventListener('DOMContentLoaded', (e) => {
     const $slider = $('#companieSlider') as HTMLElement
     const $sliderTrack = $('#companieSliderContent') as HTMLElement
