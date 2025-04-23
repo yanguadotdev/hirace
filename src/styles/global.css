@@ -12,6 +12,13 @@
   --color-theme-light: hsl(240, 20%, 98%);
 
   --traX-icon: 0;
+
+  --animate-marquee: marquee 20s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @layer base {
@@ -69,7 +76,6 @@
   font-weight: 700;
   font-display: swap;
 }
-
 
 html {
   font-family: 'Poppins', sans-serif;
