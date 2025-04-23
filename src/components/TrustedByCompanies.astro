@@ -1,3 +1,35 @@
-<section id="trustedByCompanies">
-
+<section id="trustedByCompanies" class="bg-theme-light py-20">
+  <div class="mx-auto max-w-[1200px] px-4">
+    <h2 class="text-theme-dark/70 mb-10 text-center text-[clamp(1rem,2vw,1.5rem)]">
+      Trusted by 150+ world's best companies
+    </h2>
+    <section class="relative overflow-hidden whitespace-nowrap py-4" id="companieSlider">
+      <div
+        id="companieSliderContent"
+        class="[&>*]:grayscale-100 [&>*]:hover:transform-[scale(1.2)_rotate(5deg)] [&>*:nth-child(odd):hover]:transform-[scale(1.2)_rotate(-5deg)] inline-block whitespace-nowrap [&>*]:mx-6 [&>*]:inline-block [&>*]:h-8 [&>*]:w-auto [&>*]:transition-transform [&>*]:duration-300 [&>*]:ease-[cubic-bezier(.33,-0.09,.65,1.27)] [&>*]:hover:grayscale-0 [&>*]:max-w-max"
+      >
+        <img src="/clients/airbnb.svg" alt="Airbnb Logo" />
+        <img src="/clients/asana.svg" alt="Asana Logo" />
+        <img src="/clients/shopify.svg" alt="Shopify Logo" />
+        <img src="/clients/stackoverflow.svg" alt="StackOverflow Logo" />
+        <img src="/clients/supabase.svg" alt="Supabase Logo" />
+        <img src="/clients/tinacms.svg" alt="TinaCMS Logo" />
+        <img src="/clients/turso.svg" alt="Turso Logo" />
+        <img src="/clients/zeabur.svg" alt="Zeabur Logo" />
+      </div>
+    </section>
+  </div>
 </section>
+
+<script>
+  import { $ } from '@/lib/dom-selector'
+
+  
+  document.addEventListener('DOMContentLoaded', (e) => {
+    const $slider = $('#companieSlider') as HTMLElement
+    const $sliderTrack = $('#companieSliderContent') as HTMLElement
+
+    $sliderTrack.classList.add('animate-marquee')
+    $slider.appendChild($sliderTrack.cloneNode(true))
+  })
+</script>
