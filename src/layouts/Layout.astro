@@ -3,7 +3,6 @@ import { ClientRouter } from 'astro:transitions'
 
 import '@/styles/global.css'
 import Header from '@/components/Header.astro'
-import TrustedByCompanies from '@/components/TrustedByCompanies.astro'
 import Footer from '@/components/Footer.astro'
 ---
 
@@ -79,12 +78,11 @@ import Footer from '@/components/Footer.astro'
     />
     <ClientRouter />
   </head>
-  <body>
+  <body class="text-theme-dark">
     <Header />
     <main>
       <slot />
     </main>
-    <TrustedByCompanies />
     <Footer />
   </body>
 </html>
