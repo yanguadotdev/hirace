@@ -1,0 +1,118 @@
+---
+import Subtitle from './Subtitle.astro'
+import OneFeature from '@/assets/features/one.svg'
+import TwoFeature from '@/assets/features/two.svg'
+import ThreeFeature from '@/assets/features/three.svg'
+---
+
+<section id="feature" class="py-20 text-center">
+  <div class="mx-auto max-w-[1200px] px-4">
+    <Subtitle text="Features" />
+    <h2 class="my-6 text-[clamp(1.5rem,4vw,2rem)] font-semibold">New way to get a Job</h2>
+    <p class="mx-auto max-w-[500px]">
+      Once you gain access to the Hirace platform you start out by adding your first team roles.
+    </p>
+
+    <ul class="flex justify-center flex-wrap gap-6 mt-8">
+      <li class="flex flex-col items-start justify-start rounded-2xl gap-3 text-sm border border-theme-light-grey text-left grow basis-3xs p-8">
+        <OneFeature class="w-auto h-10" />
+        <h3 class="text-xl font-medium leading-tight">Manage candidates easily</h3>
+        <p class="list-features__feature-info">
+          Our easy-to-use software lets you evaluate candidates and move them faster.
+        </p>
+        <a href="#" class="primary-link feature-link u-center">
+          <span>Learn More</span>
+          <svg
+            class="arrow"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 12L16 7M21 12L16 17M21 12H3"
+              stroke="#625AFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </li>
+      <li class="flex flex-col items-start justify-start rounded-2xl gap-3 text-sm border border-theme-light-grey text-left grow basis-3xs p-8">
+        <TwoFeature class="w-auto h-10" />
+        <h3 class="text-xl font-medium leading-tight">User-friendly hiring software</h3>
+        <p class="list-features__feature-info">
+          Make it easy and quick for top candidates to find your jobs.
+        </p>
+        <a href="#" class="primary-link feature-link u-center">
+          <span>Learn More</span>
+          <svg
+            class="arrow"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 12L16 7M21 12L16 17M21 12H3"
+              stroke="#625AFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </li>
+      <li class="flex flex-col items-start justify-start rounded-2xl gap-3 text-sm border border-theme-light-grey text-left grow basis-3xs p-8">
+        <ThreeFeature class="w-auto h-10" />
+        <h3 class="text-xl font-medium leading-tight">Make the perfect hire</h3>
+        <p class="list-features__feature-info">
+          Reduce hiring time by finding qualified candidates quickly and easily.
+        </p>
+        <a href="#" class="primary-link feature-link u-center">
+          <span>Learn More</span>
+          <svg
+            class="arrow"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 12L16 7M21 12L16 17M21 12H3"
+              stroke="#625AFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .list-features {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-top: 2rem;
+}
+
+.list-features__feature {
+    flex-direction: column;
+    flex-basis: 250px;
+    flex-grow: 1;
+    align-items: start;
+    justify-content: start;
+    text-align: left;
+    border: 1px solid hsl(var(--light-grey));
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: .75rem;
+    font-size: .875rem;
+}
+
+</style>
