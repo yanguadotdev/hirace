@@ -1,0 +1,135 @@
+---
+import Subtitle from './Subtitle.astro'
+---
+
+<section id="howWork" class="py-20 text-center">
+  <div class="@container/steps mx-auto max-w-[1200px] px-4">
+    <Subtitle text="HOW IT WORKS" />
+    <h2 class="my-6 text-[clamp(1.5rem,4vw,2rem)] font-semibold">Getting started is easy</h2>
+    <p class="mx-auto max-w-[500px]">
+      Create a profile and we'll match you with the best your dream companies and jobs in the world.
+    </p>
+
+    <!-- STEPS -->
+    <section class="mt-10">
+      <div class="rounded-4xl border-theme-light-grey @5xl/steps:p-10 @5xl/steps:pr-18 border p-6">
+        <div
+          class="@5xl/steps:gap-24 flex flex-wrap items-start justify-start gap-x-16 gap-y-8 text-left"
+        >
+          <div
+            class="@container/graphic @5xl/steps:basis-[400px] flex h-[350px] grow basis-[300px] items-end overflow-hidden rounded-3xl bg-[url(/steps/bg-gradient.jpg)] bg-cover bg-center bg-no-repeat"
+          >
+            <img
+              class="@[400px]/graphic:max-w-[70%] @[450px]/graphic:max-w-[60%] @[550px]/graphic:max-w-[50%] mx-auto block w-auto max-w-[80%] object-cover leading-none transition-transform"
+              src="/steps/step2.png"
+              alt=""
+            />
+          </div>
+
+          <div class="grow basis-[350px]">
+            <span class="text-theme-primary text-2xl font-medium">02</span>
+            <h3 class="mt-3 text-[clamp(1rem,4vw,1.75rem)] font-semibold">
+              Fill your Personal Data
+            </h3>
+            <p class="mt-3">
+              Finish your register and and complete your personal data and prepare your resume.
+            </p>
+
+            <hr class="border-theme-light-grey my-8 block w-full border outline-0" />
+
+            <ul class="[&>li+li]:mt-4">
+              <li class="flex items-start justify-start gap-3 text-sm">
+                <svg
+                  class="min-w-[20px]"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#635BFF"></circle>
+                  <path
+                    d="M10 16L14.2426 20.2426L22.727 11.7573"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+
+                <span>
+                  <strong>One workflow.</strong> Easily collaborate with teams to find & hire the right
+                  candidate.
+                </span>
+              </li>
+
+              <li class="flex items-start justify-start gap-3 text-sm">
+                <svg
+                  class="min-w-[20px]"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="16" cy="16" r="16" fill="#635BFF"></circle>
+                  <path
+                    d="M10 16L14.2426 20.2426L22.727 11.7573"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+
+                <span>
+                  <strong>Easier Applying.</strong> Create account that will engage your profile
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-16 flex flex-wrap items-start justify-center gap-12 px-6 text-left"
+      >
+        <div
+          class="border-t-theme-light-grey flex grow basis-[200px] flex-col items-start gap-3 border-t-4 pt-6"
+        >
+          <span class="text-theme-dark/80 text-xl font-medium">01</span>
+          <h3 class="font-medium leading-none">Login or Register</h3>
+          <p class="text-theme-dark/90 text-sm">
+            Follow the whole step and you're just ready to get started.
+          </p>
+        </div>
+
+        <div class="border-t-theme-primary flex grow basis-[200px] flex-col items-start gap-3 border-t-4 pt-6">
+          <span class="text-theme-dark/80 text-xl font-medium">02</span>
+          <h3 class="font-medium leading-none text-theme-primary">Fill your Personal Data</h3>
+          <p class="text-theme-dark/90 text-sm">
+            Finish your register and and complete your personal data.
+          </p>
+        </div>
+
+        <div
+          class="border-t-theme-light-grey flex grow basis-[200px] flex-col items-start gap-3 border-t-4 pt-6"
+        >
+          <span class="text-theme-dark/80 text-xl font-medium">03</span>
+          <h3 class="font-medium leading-none">Upload your Resume</h3>
+          <p class="text-theme-dark/90 text-sm">
+            Upload your latest resume that match with your background.
+          </p>
+        </div>
+
+        <div
+          class="border-t-theme-light-grey flex grow basis-[200px] flex-col items-start gap-3 border-t-4 pt-6"
+        >
+          <span class="text-theme-dark/80 text-xl font-medium">04</span>
+          <h3 class="font-medium leading-none">Find the Math Job</h3>
+          <p class="text-theme-dark/90 text-sm">
+            Look for job vacancy and immediately get your dream job
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
