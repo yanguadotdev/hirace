@@ -1,0 +1,100 @@
+---
+interface Props {
+  title: string
+  company: string
+  companyLogo: string
+  description: string
+  date: string
+  location: string
+  salary: string
+  modality: string
+}
+
+const { title, company, companyLogo, description, date, location, salary, modality }: Props =
+  Astro.props
+---
+
+<article class="@container/job basis-[480px]">
+  <a
+    href="#"
+    class="@sm/job:p-8 border-theme-light-grey @sm/job:transition-all @sm/job:hover:border-theme-primary @sm/job:hover:shadow-[4px_4px_0_0] @sm/job:hover:shadow-theme-primary group block w-full rounded-3xl border-2 p-4 text-left shadow-[4px_4px_0_0_transparent] duration-300 ease-[ease]"
+  >
+    <header class="@sm/job:gap-4 flex flex-wrap items-start justify-start gap-2">
+      <img src={companyLogo} alt={`Logo de la plataforma ${company}`} class="w-12" />
+      <div class="@sm/job:w-auto flex w-full grow items-start justify-start">
+        <div>
+          <h3 class="mb-1 text-nowrap font-medium leading-tight">{title}</h3>
+          <p class="text-theme-dark/80 text-sm font-medium">{company}</p>
+        </div>
+        <svg
+          class="@sm/job:block @sm/job:w-0 @sm/job:transition-[width,translate] @sm/job:group-hover:w-6 @sm/job:group-hover:translate-x-2 ml-auto hidden overflow-hidden duration-300 ease-[ease]"
+          width="24"
+          height="24"
+        >
+          <path
+            d="M21 12L16 7M21 12L16 17M21 12H3"
+            stroke="#625AFF"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+
+      <time
+        datetime={date}
+        class="text-theme-primary @sm/job:w-20 @sm/job:transition-[opacity,width] @sm/job:group-hover:opacity-0 @sm/job:group-hover:w-0 overflow-hidden text-nowrap text-xs font-medium duration-300 ease-[ease]"
+        >{date}</time
+      >
+    </header>
+
+    <div class="job__body">
+      <p class="text-theme-dark/90 mt-4 text-sm">{description}</p>
+    </div>
+
+    <hr class="border-theme-light-grey my-8 w-full border outline-0" />
+
+    <footer
+      class="@sm/job:flex-row @sm/job:items-center flex flex-col items-start justify-start gap-x-3 gap-y-2"
+    >
+      <div
+        class="text-theme-dark/90 @md/job:text-base flex items-center gap-1 text-nowrap text-xs font-medium"
+      >
+        <svg width="16" height="16">
+          <path
+            d="M10 4V14M10 4L14 2V12L10 14M10 4L6 2M10 14L6 12M6 12L2 14V4L6 2M6 12V2"
+            stroke="#8793AA"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+
+        <span>{location}</span>
+      </div>
+
+      <span class="@sm/job:w-1 @sm/job:h-1 bg-theme-dark/50 rounded-full"></span>
+
+      <div
+        class="text-theme-dark/90 @md/job:text-base flex items-center gap-1 text-nowrap text-xs font-medium"
+      >
+        <svg width="16" height="16">
+          <path
+            d="M8 4V12M6 10.1213L6.586 10.5607C7.36667 11.1467 8.63267 11.1467 9.414 10.5607C10.1953 9.97467 10.1953 9.02533 9.414 8.43933C9.024 8.146 8.512 8 8 8C7.51667 8 7.03333 7.85333 6.66467 7.56067C5.92733 6.97467 5.92733 6.02533 6.66467 5.43933C7.402 4.85333 8.598 4.85333 9.33533 5.43933L9.612 5.65933M14 8C14 8.78793 13.8448 9.56815 13.5433 10.2961C13.2417 11.0241 12.7998 11.6855 12.2426 12.2426C11.6855 12.7998 11.0241 13.2417 10.2961 13.5433C9.56815 13.8448 8.78793 14 8 14C7.21207 14 6.43185 13.8448 5.7039 13.5433C4.97595 13.2417 4.31451 12.7998 3.75736 12.2426C3.20021 11.6855 2.75825 11.0241 2.45672 10.2961C2.15519 9.56815 2 8.78793 2 8C2 6.4087 2.63214 4.88258 3.75736 3.75736C4.88258 2.63214 6.4087 2 8 2C9.5913 2 11.1174 2.63214 12.2426 3.75736C13.3679 4.88258 14 6.4087 14 8Z"
+            stroke="#8793AA"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+
+        <span>{salary}</span>
+      </div>
+
+      <span class="@sm/job:w-1 @sm/job:h-1 bg-theme-dark/50 rounded-full"></span>
+
+      <div
+        class="text-theme-dark/90 @md/job:text-base flex items-center gap-1 text-nowrap text-xs font-medium"
+      >
+        {modality}
+      </div>
+    </footer>
+  </a>
+</article>
