@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
+  /* CUSTOM BREAKPOINTS */
+  --breakpoint-2md: 60rem;
+  --breakpoint-2lg: 75rem;
+
   --font-primary: 'Poppins';
 
   --color-theme-primary: hsl(243, 100%, 68%);
