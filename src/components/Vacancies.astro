@@ -1,0 +1,122 @@
+---
+import Subtitle from '@/components/Subtitle.astro'
+import Job from '@/components/Job.astro'
+---
+
+<section id="vacancy" class="bg-theme-light py-20 text-center">
+  <div class="mx-auto max-w-[1200px] px-4">
+    <Subtitle text="JOB VACANCY" />
+    <h2 class="my-6 text-[clamp(1.5rem,4vw,2rem)] font-semibold">Discover the best job</h2>
+    <p class="mx-auto max-w-[500px]">
+      Start career with the best company in the world, we ensures you to get the best job possible.
+    </p>
+
+    <section class="mt-8">
+      <div
+        class="border-theme-light-grey mx-auto flex w-max items-center justify-center rounded-2xl border bg-white p-1"
+      >
+        <button class="bg-theme-primary rounded-xl px-6 py-2 font-medium text-white">
+          Popular
+        </button>
+        <!-- ACTIVE TAB -->
+        <button class="text-theme-primary rounded-xl px-6 py-2 font-medium"> Lastest </button>
+      </div>
+
+      <ul class="mx-auto mt-12 flex flex-wrap items-start justify-center gap-8">
+        <Job
+          companyLogo="/companies/loom.svg"
+          title="Web Developer"
+          company="Loom"
+          date="12 Jan 2022"
+          date="12/01/2022"
+          description="We are on a mission to empower everyone at work to communicate more effectively."
+          location="New York"
+          salary="75k-90k / Year"
+          modality="Part-Time"
+        />
+
+        <Job
+          companyLogo="/companies/mastercard.svg"
+          title="Senior DevOps Engineer"
+          company="Mastercard"
+          date="08 Jan 2022"
+          date="08/01/2022"
+          description="Mastercard is a leading customer relationship management platform for scaling companies."
+          location="California"
+          salary="75k-90k / Year"
+          modality="Contract"
+        />
+
+        <Job
+          companyLogo="/companies/framer.svg"
+          title="Product Designer"
+          company="Loom"
+          date="02 Feb 2022"
+          date="02/02/2022"
+          description="We are Framer. We're building the web design platform to help you do that."
+          location="San Diego"
+          salary="75k-90k / Year"
+          modality="Part-Time"
+        />
+
+        <Job
+          companyLogo="/companies/notion.svg"
+          title="Frontend Engineer"
+          company="Notion"
+          date="15/01/2022"
+          description="Your all-in-one workspace for tasks, notes, wikis, databases, and team collaboration."
+          location="New York"
+          salary="10k-18k / Month"
+          modality="Internship"
+        />
+
+        <Job
+          companyLogo="/companies/spotify.svg"
+          title="Data Scientist"
+          company="Spotify"
+          date="05/07/2022"
+          description="Passionate music fans. Innovative tech pros. Perfect harmony. Join our band."
+          location="California"
+          salary="75k-95k / Year"
+          modality="Full-Time"
+        />
+
+        <Job
+          companyLogo="/companies/twiter.svg"
+          title="UX Researcher"
+          company="Twiter"
+          date="13/02/2022"
+          description="Twitter is the market-leading linking platform that was the first of its kind."
+          location="New York"
+          salary="60k-80k / Year"
+          modality="Full-Time"
+        />
+      </ul>
+
+      <p class="mt-12 w-full text-sm">
+        Did not find what you're looking for?
+        <a
+          href="#"
+          class="text-theme-primary group ml-1 inline-flex items-center justify-center gap-1 font-medium underline decoration-1 underline-offset-2"
+        >
+          <span>View All Job</span>
+          <svg
+            class="transition-transform duration-300 ease-[ease] group-hover:translate-x-1"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 12L16 7M21 12L16 17M21 12H3"
+              stroke="#625AFF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </p>
+    </section>
+  </div>
+</section>
