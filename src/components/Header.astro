@@ -28,7 +28,7 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
         class="[&_a]:hover:text-theme-primary flex flex-col items-center gap-4 p-6 font-normal lg:flex-row lg:gap-6 lg:p-0 [&_a]:px-3 [&_a]:py-1 [&_a]:font-medium [&_a]:transition-all"
       >
         <a href="#feature">Features</a>
-        <a href="#">How it Works</a>
+        <a href="#howWork">How it Works</a>
         <a href="#vacancy">Jobs Vacancy</a>
         <a href="#">Pricing</a>
       </ul>
@@ -138,11 +138,13 @@ const shouldDoClick = !disableClickOnRoutes.includes(pathname)
   })
 
   document.addEventListener('click', (e) => {
-    const target = e.target as Node
+    const target = e.target as HTMLElement
     const isClickInsideMenu = header.contains(target)
     const isClickOnBtn = menuBtn.contains(target)
+    const isClickOnLink = nav.contains(target) && target.closest('a')
 
-    if (!isClickInsideMenu && !isClickOnBtn && nav?.classList.contains('open')) {
+
+    if ((!isClickInsideMenu && !isClickOnBtn && nav?.classList.contains('open')) || isClickOnLink) {
       nav.classList.remove('open')
       menuBtn.setAttribute('aria-expanded', 'false')
       body.classList.remove('overflow-hidden')
