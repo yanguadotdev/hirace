@@ -17,7 +17,7 @@ The landing page showcases a modern and responsive design, built to practice fro
 
    ```bash
    git clone https://github.com/yanguadotdev/hirace.git
-   cd hirace-landing-page
+   cd hirace
    pnpm install
    pnpm run dev
    ```
